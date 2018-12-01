@@ -14,5 +14,13 @@ AHK seems to be a good way to do that on Windows and as this script can be usefu
 
 The provided executable release is specific to the needs of my friend Didier. You'll have to adapt the source code to your needs to make it work for you.
 
-1. Install [AutoHotKey (AHK)](https://www.autohotkey.com/)
-2. get the source code 
+* create your presets in [Bome Midi Translator Pro (MTP)](https://www.bome.com/products/miditranslator) and assign them a shortcut key (for example [ALT] + [CTRL] + [F?] where F? is a function key from F1 to F12).
+* Install [AutoHotKey (AHK)](https://www.autohotkey.com/)
+* get the [source code](https://github.com/Fabrice-Deshayes-aka-Xtream/mtp_preset_auto_switcher/blob/master/src/MTP_preset_auto_switcher.ahk) and adapt it to your needs
+    * adapt `WinActive("???")` to the title of the windows of your software
+    * adapt `SendInput !^{F2}` to the shortcut of your preset un MTP (!^ mean ALT + CTRL)
+    * duplicate the `if else` block if you need more than 3 presets
+* when your source is OK, you can compile it as an exe file (right click on it -> Compile Script)
+* if you want to autostart your script with Windows:
+    * press WIN + R to run this command: `shell:startup`. This will open your startup folder
+    * put your compiled script in this folder. that's all !
